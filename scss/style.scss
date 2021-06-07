@@ -1,0 +1,194 @@
+*,
+::after ,
+::before {
+    box-sizing: border-box;
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'ProximaNova'; 
+    font-weight: 400;
+
+}
+
+h1,h2 {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+.section {
+    max-width: 812px;
+    margin: 0 auto;   
+    background-color: #FF862F;
+    background-image: url('../img/white_line.svg');
+    background-repeat: no-repeat;
+    background-position-y: 90%;
+    background-position-x: center;
+    background-size: 100%;
+    padding: 15px 0 30px 0;
+    position: relative;
+    &::after {
+        content: url('../img/img.svg');
+        position: absolute;
+        right: 0;
+        top: 35%;
+    }
+}
+.container {
+    margin: 0 auto;
+    max-width: 290px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.list {
+    padding: 27px 35px 16px 25px;
+    margin: 0;
+}
+.list {
+    &__item {
+        margin: 0;
+        padding-bottom: 15px;
+        list-style: none;
+        display: flex;
+        align-items: baseline;
+        margin-left: 4px;
+        &--circle {
+            &::before {
+                content: '';
+                display: flex;
+                flex: 0 0 auto;
+                width: 6px;
+                height: 6px;
+                background-color: #9291D8;
+                border-radius: 100%;
+                margin-right: 4px;
+                margin-left: -7px;
+            }
+        }
+    }
+}
+.text {
+    font-size: 12px;
+    line-height: 15px;
+}
+.bold {
+    font-weight: 900;
+}
+.button {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    padding: 17px 58px;
+    width: 195px;
+    height: 51px;
+    background: #A09FFB;
+    border-radius: 45px;
+    text-decoration: none;
+}
+.footer {
+    background-color: #FF862F;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    &__inner {
+        margin-top: 20px;
+        background-color: #fff;
+        position: relative;
+        display: flex;
+    }
+    &__img {
+        display: block;
+        width: 217px;
+        height: 295px;  
+        &--dots {
+            position: absolute;
+            top: 125px;
+            left: 8px;
+        }
+    }
+    &__text {
+        position: absolute;
+        right: 10px;
+        top: 45px;
+        display: flex;
+        flex-direction: column;
+        &--item {
+            font-family: 'ProximaNova';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 20px;
+            color: #000000;
+        }
+    }
+    &__link {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        &--img {
+            display: block;
+            width: 20px;
+            height: 20px;
+            svg {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &--link {
+            padding-left: 8px;
+            font-family: 'ProximaNova';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration-line: underline;
+            color: #000000;
+            &:hover {
+                opacity: .7;
+                transition: .2s linear;
+            }
+        }
+    }
+}
+
+@media(min-width: 414px) {
+    .text {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .button {
+        font-size: 18px;
+        padding: 18px 40px;
+        width: 215px;
+        height: 60px;
+    }
+}
+@font-face {
+    font-family: 'ProximaNova'; 
+    src: url(../fonts/ProximaNova-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'ProximaNova'; 
+    src: url(../fonts/ProximaNova-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Arial'; 
+    src: url(../fonts/Arial-Black.ttf);
+    font-weight: 900;
+}
